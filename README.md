@@ -8,6 +8,12 @@ This repository contains a custom node for ComfyUI. The node, called "Bounding B
 - Takes input for the left, top, right, and bottom coordinates of the bounding box, as well as the desired width and height of the cropped area.
 - Suitable for integration into ComfyUI workflows.
 
+## Example
+
+![Example Workflow](example/workflow.png)
+
+You can use `example/workflow.json` to run the custom node. It requires also [ComfyUI-Impact-Pack](https://github.com/ltdrdata/ComfyUI-Impact-Pack)
+
 ## Installation
 
 To use the Bounding Box Crop node in your ComfyUI workflow, follow these steps:
