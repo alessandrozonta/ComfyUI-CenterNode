@@ -1,20 +1,20 @@
 class BBoxCrop:
     """
-    A custom node to compute the top-left coordinates of a cropped bounding box.
+    A custom node for ComfyUI that computes the top-left coordinates of a cropped bounding box given the dimension of the final cropping area.
 
-    Class methods
-    -------------
-    INPUT_TYPES (dict):
-        Tells the main program input parameters of nodes.
+    Class Methods:
+    --------------
+    INPUT_TYPES(cls) -> dict:
+        A class method returning a dictionary containing configuration for input fields.
 
-    Attributes
-    ----------
-    RETURN_TYPES (`tuple`):
-        The type of each element in the output tuple.
-    FUNCTION (`str`):
+    Attributes:
+    -----------
+    RETURN_TYPES (tuple): 
+        Specifies the types of each element in the output tuple.
+    FUNCTION (str): 
         The name of the entry-point method.
-    CATEGORY (`str`):
-        The category the node should appear in the UI.
+    CATEGORY (str): 
+        Specifies the category the node should appear in the UI.
     """
     def __init__(self):
         pass
@@ -22,16 +22,12 @@ class BBoxCrop:
     @classmethod
     def INPUT_TYPES(cls):
         """
-        Return a dictionary which contains config for all input fields.
+        Returns a dictionary containing configuration for input fields.
 
-        Returns: `dict`:
-            - Key input_fields_group (`string`): Can be either required, hidden, or optional.
-              A node class must have property `required`.
-            - Value input_fields (`dict`): Contains input fields config:
-                * Key field_name (`string`): Name of an entry-point method’s argument.
-                * Value field_config (`tuple`):
-                    + First value is a string indicating the type of field or a list for selection.
-                    + Second value is a config for type "INT".
+        Returns:
+        --------
+        dict:
+            A dictionary with keys specifying input fields and values specifying their types and default values.
         """
         return {
             "required": {
