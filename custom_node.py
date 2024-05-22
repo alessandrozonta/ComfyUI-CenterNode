@@ -31,10 +31,10 @@ class BBoxCrop:
         """
         return {
             "required": {
-                "left": ("INT"),
-                "top": ("INT"),
-                "right": ("INT"),
-                "bottom": ("INT"),
+                "left": ("INT", {"default": 0}),
+                "top": ("INT", {"default": 0}),
+                "right": ("INT", {"default": 100}),
+                "bottom": ("INT", {"default": 100}),
                 "crop_width": ("INT", {"default": 50}),
                 "crop_height": ("INT", {"default": 50})
             },
